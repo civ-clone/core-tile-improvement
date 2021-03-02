@@ -17,8 +17,10 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.TileImprovement = void 0;
 const Built_1 = require("./Rules/Built");
 const RuleRegistry_1 = require("@civ-clone/core-rule/RuleRegistry");
-class TileImprovement {
+const DataObject_1 = require("@civ-clone/core-data-object/DataObject");
+class TileImprovement extends DataObject_1.default {
     constructor(tile, ruleRegistry = RuleRegistry_1.instance) {
+        super();
         _tile.set(this, void 0);
         __classPrivateFieldSet(this, _tile, tile);
         ruleRegistry.process(Built_1.Built, tile, this);
