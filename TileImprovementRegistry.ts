@@ -12,7 +12,8 @@ export interface ITileImprovementRegistry
 
 export class TileImprovementRegistry
   extends EntityRegistry<TileImprovement>
-  implements ITileImprovementRegistry {
+  implements ITileImprovementRegistry
+{
   constructor() {
     super(TileImprovement);
   }

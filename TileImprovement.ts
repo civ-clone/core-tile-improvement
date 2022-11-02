@@ -1,12 +1,13 @@
-import { Built, IBuiltRegistry } from './Rules/Built';
+import {
+  DataObject,
+  IDataObject,
+} from '@civ-clone/core-data-object/DataObject';
 import {
   RuleRegistry,
   instance as ruleRegistryInstance,
 } from '@civ-clone/core-rule/RuleRegistry';
+import Built from './Rules/Built';
 import Tile from '@civ-clone/core-world/Tile';
-import DataObject, {
-  IDataObject,
-} from '@civ-clone/core-data-object/DataObject';
 
 export interface ITileImprovement extends IDataObject {
   tile(): Tile;
@@ -20,7 +21,7 @@ export class TileImprovement extends DataObject implements ITileImprovement {
 
     this.#tile = tile;
 
-    (ruleRegistry as IBuiltRegistry).process(Built, tile, this);
+    ruleRegistry.process(Built, tile, this);
   }
 
   tile(): Tile {

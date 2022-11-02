@@ -10,7 +10,8 @@ export interface ITileImprovementRegistry
 }
 export declare class TileImprovementRegistry
   extends EntityRegistry<TileImprovement>
-  implements ITileImprovementRegistry {
+  implements ITileImprovementRegistry
+{
   constructor();
   getByTile(tile: Tile): TileImprovement[];
 }
