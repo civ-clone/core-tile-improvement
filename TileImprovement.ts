@@ -14,18 +14,18 @@ export interface ITileImprovement extends IDataObject {
 }
 
 export class TileImprovement extends DataObject implements ITileImprovement {
-  #tile: Tile;
+  private _tile: Tile;
 
   constructor(tile: Tile, ruleRegistry: RuleRegistry = ruleRegistryInstance) {
     super();
 
-    this.#tile = tile;
+    this._tile = tile;
 
     ruleRegistry.process(Built, tile, this);
   }
 
   tile(): Tile {
-    return this.#tile;
+    return this._tile;
   }
 }
 

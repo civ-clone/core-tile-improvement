@@ -11,7 +11,7 @@ export declare class TileImprovement
   extends DataObject
   implements ITileImprovement
 {
-  #private;
+  private _tile;
   constructor(tile: Tile, ruleRegistry?: RuleRegistry);
   tile(): Tile;
 }
