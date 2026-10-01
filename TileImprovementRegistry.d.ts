@@ -12,6 +12,7 @@ export declare class TileImprovementRegistry
   extends EntityRegistry<TileImprovement>
   implements ITileImprovementRegistry
 {
+  private _byTile;
   constructor();
   getByTile(tile: Tile): TileImprovement[];
 }
